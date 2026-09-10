@@ -1,0 +1,60 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'AptiTek — Modern Starter Template',
+  description = 'High performance web application template powered by Astro, React, and Storybook.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  :root {
+    --color-bg: #0f172a;
+    --color-card: #1e293b;
+    --color-text: #f8fafc;
+    --color-text-muted: #94a3b8;
+    --color-primary: #3b82f6;
+    --color-border: #334155;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family:
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      Roboto,
+      sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+  }
+</style>

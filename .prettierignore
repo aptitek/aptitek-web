@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.astro/
+storybook-static/
+test-results/
+playwright-report/
+pnpm-lock.yaml
+.husky/
+.agents/
+coverage/
+.wireit/

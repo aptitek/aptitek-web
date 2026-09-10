@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+# Run full lint with fixes (eslint --fix, knip --fix, prettier --write)
+pnpm run lint:fix
+
+# Stage fixes automatically
+git update-index --again 2>/dev/null || git add -u
+
+# Verify that the entire lint suite passes cleanly
+pnpm run lint
